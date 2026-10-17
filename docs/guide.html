@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Guide | SlotDeck</title>
+  <meta name="description" content="How to use SlotDeck.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="./"><img src="assets/img/logo.png" alt="">SlotDeck</a>
+    <nav><a href="guide.html">User Guide</a></nav>
+  </header>
+
+  <main class="guide">
+    <h1>User Guide</h1>
+    <p class="lead">SlotDeck is a Windows DJ app for managing a west coast swing music library and playing it live.</p>
+
+    <nav class="toc" aria-label="Contents">
+      <ol>
+        <li><a href="#layout">The window</a></li>
+        <li><a href="#library">Load your library</a></li>
+        <li><a href="#search">Search and edit tracks</a></li>
+        <li><a href="#audio">Set up audio outputs</a></li>
+        <li><a href="#preview">Preview a track</a></li>
+        <li><a href="#decks">Play on Deck A and B</a></li>
+        <li><a href="#automix">Automix queue</a></li>
+        <li><a href="#playlists">Playlists and folders</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#display">Themes and display</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="layout">The window</h2>
+    <p>The window has three rows:</p>
+    <ul>
+      <li><strong>Toolbar</strong> (top): load or refresh the library, Automix, Audio Settings, theme, and UI scale.</li>
+      <li><strong>Library</strong> (middle): your tracks, with the Automix queue on the right.</li>
+      <li><strong>Decks</strong> (bottom): Deck A and Deck B, each with its own EQ and volume.</li>
+    </ul>
+    <figure><div class="shot">Screenshot: main window</div></figure>
+
+    <h2 id="library">Load your library</h2>
+    <ol>
+      <li>Click the load button in the toolbar and choose your music folder.</li>
+      <li>SlotDeck scans it and lists your tracks, with a track count above the table.</li>
+      <li>Added new music? Click refresh to rescan the same folder.</li>
+    </ol>
+    <p>SlotDeck remembers your folder and settings and restores them next time you open the app.</p>
+
+    <h2 id="search">Search and edit tracks</h2>
+    <ul>
+      <li><strong>Search</strong> by title, artist, BPM (beats per minute, the tempo), key, genre, or energy.</li>
+      <li><strong>Choose columns:</strong> right-click any column header to show or hide Title, Artist, Length, BPM, Key, Energy, and Genre. Drag column edges to resize.</li>
+      <li><strong>Edit:</strong> change a track's title, artist, energy, or genre in the table, then click <strong>Save</strong> on that row. Length, BPM, and Key are read-only.</li>
+    </ul>
+    <figure><div class="shot">Screenshot: library table</div></figure>
+
+    <h2 id="audio">Set up audio outputs</h2>
+    <p>Click <strong>Audio Settings</strong> in the toolbar. SlotDeck uses two separate outputs:</p>
+    <ul>
+      <li><strong>Master:</strong> what the audience hears. Decks A and B play here.</li>
+      <li><strong>Headphones:</strong> what only you hear. Previews play here.</li>
+    </ul>
+    <p>Each selector shows <code>PASS</code> or <code>X</code> to say whether that device works. Use the refresh control if you plug in a new device. While a deck or Automix is playing, the master selector and refresh are locked so the music can't be interrupted.</p>
+    <figure><div class="shot">Screenshot: Audio Settings</div></figure>
+
+    <h2 id="preview">Preview a track</h2>
+    <p>Preview lets you audition a song in your headphones before playing it for the room.</p>
+    <ol>
+      <li>Set a headphones output that shows <code>PASS</code>. Until then, Preview is disabled.</li>
+      <li>Click <strong>Preview</strong> on a track. A progress meter appears on its row.</li>
+      <li>Click <strong>Stop preview</strong>, or preview another track, to stop it.</li>
+    </ol>
+
+    <h2 id="decks">Play on Deck A and B</h2>
+    <ol>
+      <li>In a track's Action column, click <strong>A</strong> or <strong>B</strong> to load it onto that deck.</li>
+      <li>Click <strong>Play</strong> / <strong>Pause</strong> on the deck. Both decks can play at once.</li>
+      <li>Each deck shows elapsed, remaining, and total time.</li>
+      <li>Click the waveform to jump to that spot, playing or paused.</li>
+      <li>Use each deck's EQ (bass, mid, treble) and volume sliders to shape the sound.</li>
+      <li>Click <strong>Remove</strong> to unload a deck.</li>
+    </ol>
+    <figure><div class="shot">Screenshot: Deck A and Deck B</div></figure>
+
+    <h2 id="automix">Automix queue</h2>
+    <p>Automix plays a list of songs back to back, so you don't have to load each one by hand.</p>
+    <ol>
+      <li>Click <strong>AM+</strong> on a track to add it to the queue on the right.</li>
+      <li>Drag to reorder, preview, or remove queued tracks.</li>
+      <li>Choose which deck Automix uses (Deck A or B). This is locked while it runs.</li>
+      <li>Click <strong>Start</strong>. It's enabled once a library is loaded, the queue has tracks, and the master output shows <code>PASS</code>.</li>
+    </ol>
+    <p>If the chosen deck is idle, the first song starts right away. If it already has a song, Automix waits and starts the next one when that song ends. Click <strong>Stop</strong> to end Automix.</p>
+
+    <h2 id="playlists">Playlists and folders</h2>
+    <ul>
+      <li><strong>Create, rename, duplicate, delete, and export</strong> named playlists. Ctrl-click or Shift-click selects several for batch actions.</li>
+      <li><strong>Open a playlist</strong> to use it like a smaller library: search, preview, load to a deck, add, remove, and reorder songs.</li>
+      <li><strong>Send to Automix:</strong> append a playlist to the queue, or replace the queue with it (you'll be asked to confirm).</li>
+      <li><strong>Import</strong> playlists from <code>.m3u</code> or <code>.m3u8</code> files.</li>
+      <li><strong>Folders</strong> group playlists one level deep. Drag playlists in, or use <strong>Move to folder</strong>.</li>
+    </ul>
+
+    <h2 id="history">History</h2>
+    <p>SlotDeck records each set you play automatically. Open History in the Collections pane to review a set, export it to PDF, or delete it.</p>
+
+    <h2 id="display">Themes and display</h2>
+    <ul>
+      <li><strong>Theme:</strong> switch between night and day.</li>
+      <li><strong>UI scale:</strong> make the interface larger or smaller from the toolbar.</li>
+      <li><strong>Full screen:</strong> borderless full screen that covers the taskbar.</li>
+    </ul>
+    <p>SlotDeck is built to keep playing smoothly while you use other apps on the same computer.</p>
+  </main>
+
+  <footer>&copy; 2026 SlotDeck</footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
